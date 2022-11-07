@@ -189,7 +189,7 @@
             // 
             // textMusteriAdiATM
             // 
-            this.textMusteriAdiATM.Location = new System.Drawing.Point(17, 25);
+            this.textMusteriAdiATM.Location = new System.Drawing.Point(6, 25);
             this.textMusteriAdiATM.Name = "textMusteriAdiATM";
             this.textMusteriAdiATM.Size = new System.Drawing.Size(161, 23);
             this.textMusteriAdiATM.TabIndex = 0;
@@ -231,6 +231,7 @@
             this.comboMusteriler.Name = "comboMusteriler";
             this.comboMusteriler.Size = new System.Drawing.Size(268, 23);
             this.comboMusteriler.TabIndex = 0;
+            this.comboMusteriler.SelectedIndexChanged += new System.EventHandler(this.comboMusteriler_SelectedIndexChanged);
             // 
             // frmMain
             // 

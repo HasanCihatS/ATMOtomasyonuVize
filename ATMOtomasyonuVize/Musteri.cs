@@ -10,5 +10,6 @@ namespace ATMOtomasyonuVize
     {
         public string MusteriAdi { get; set; }
         public string MusteriSifre { get; set; }
+        public int Bakiye { get; set; }
     }
 }
