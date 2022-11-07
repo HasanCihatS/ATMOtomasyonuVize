@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,13 @@ namespace ATMOtomasyonuVize
             musteri.MusteriSifre = SifreOlustur();
 
             musteriler.Add(musteri);
+
+            musteri.HesapDosyasiOlustur(musteri);
+            musteri.LogDosyasiOlustur(musteri);
         }
 
-        //https://stackoverflow.com/questions/4616685/how-to-generate-a-random-string-and-specify-the-length-you-want-or-better-gene
 
+        //www.stackoverflow.com/questions/4616685/how-to-generate-a-random-string-and-specify-the-length-you-want-or-better-gene
         internal string SifreOlustur()
         {
             Random rd = new Random();

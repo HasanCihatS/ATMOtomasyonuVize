@@ -36,9 +36,13 @@
             this.textMusteriAdi = new System.Windows.Forms.TextBox();
             this.tabATMOperasyonlari = new System.Windows.Forms.TabPage();
             this.tabKullaniciLoglari = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.labelMusteriler = new System.Windows.Forms.Label();
+            this.comboMusteriler = new System.Windows.Forms.ComboBox();
             this.tabControl.SuspendLayout();
             this.tabMusteriOlusturma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMusteriler)).BeginInit();
+            this.tabKullaniciLoglari.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -114,12 +118,41 @@
             // 
             // tabKullaniciLoglari
             // 
+            this.tabKullaniciLoglari.Controls.Add(this.richTextBox1);
+            this.tabKullaniciLoglari.Controls.Add(this.labelMusteriler);
+            this.tabKullaniciLoglari.Controls.Add(this.comboMusteriler);
             this.tabKullaniciLoglari.Location = new System.Drawing.Point(4, 24);
             this.tabKullaniciLoglari.Name = "tabKullaniciLoglari";
             this.tabKullaniciLoglari.Size = new System.Drawing.Size(904, 528);
             this.tabKullaniciLoglari.TabIndex = 2;
             this.tabKullaniciLoglari.Text = "Kullanıcı Logları";
             this.tabKullaniciLoglari.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(17, 74);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(865, 435);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
+            // 
+            // labelMusteriler
+            // 
+            this.labelMusteriler.AutoSize = true;
+            this.labelMusteriler.Location = new System.Drawing.Point(17, 10);
+            this.labelMusteriler.Name = "labelMusteriler";
+            this.labelMusteriler.Size = new System.Drawing.Size(47, 15);
+            this.labelMusteriler.TabIndex = 1;
+            this.labelMusteriler.Text = "Müşteri";
+            // 
+            // comboMusteriler
+            // 
+            this.comboMusteriler.FormattingEnabled = true;
+            this.comboMusteriler.Location = new System.Drawing.Point(17, 28);
+            this.comboMusteriler.Name = "comboMusteriler";
+            this.comboMusteriler.Size = new System.Drawing.Size(268, 23);
+            this.comboMusteriler.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -133,6 +166,8 @@
             this.tabMusteriOlusturma.ResumeLayout(false);
             this.tabMusteriOlusturma.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMusteriler)).EndInit();
+            this.tabKullaniciLoglari.ResumeLayout(false);
+            this.tabKullaniciLoglari.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -147,5 +182,8 @@
         private TextBox textMusteriAdi;
         private Button buttonMusteriOlustur;
         private DataGridView dataGridMusteriler;
+        private ComboBox comboMusteriler;
+        private Label labelMusteriler;
+        private RichTextBox richTextBox1;
     }
 }
