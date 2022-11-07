@@ -69,20 +69,20 @@ namespace ATMOtomasyonuVize
                 if (comboBox1.SelectedItem.ToString() == "Para Çek")
                 {
                     StreamWriter streamWriter = new StreamWriter($"./MusteriLoglari/BANKA-{musteri.MusteriAdi}-LOG.txt", true);
-                    streamWriter.WriteLine("\n\n\nPara Çekildi");
+                    streamWriter.WriteLine("Para Çekildi");
                     streamWriter.WriteLine($"Eski Bakiye: {musteri.Bakiye}");
                     musteri.Bakiye -= Convert.ToInt32(textMiktar.Text);
-                    streamWriter.WriteLine($"Yeni Bakiye: {musteri.Bakiye}");
+                    streamWriter.WriteLine($"Yeni Bakiye: {musteri.Bakiye}\n\n\n");
                     streamWriter.Close();
                     MessageBox.Show("Para Çekildi.");
                 }
                 if (comboBox1.SelectedItem.ToString() == "Para Ekle")
                 {
                     StreamWriter streamWriter = new StreamWriter($"./MusteriLoglari/BANKA-{musteri.MusteriAdi}-LOG.txt", true);
-                    streamWriter.WriteLine("\n\n\nPara Eklendi");
+                    streamWriter.WriteLine("Para Eklendi");
                     streamWriter.WriteLine($"Eski Bakiye: {musteri.Bakiye}");
                     musteri.Bakiye += Convert.ToInt32(textMiktar.Text);
-                    streamWriter.WriteLine($"Yeni Bakiye: {musteri.Bakiye}");
+                    streamWriter.WriteLine($"Yeni Bakiye: {musteri.Bakiye}\n\n\n");
                     streamWriter.Close();
 
                     MessageBox.Show("Para Eklendi.");
