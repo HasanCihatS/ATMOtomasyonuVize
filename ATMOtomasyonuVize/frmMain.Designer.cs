@@ -35,6 +35,13 @@
             this.labelMusteriAdi = new System.Windows.Forms.Label();
             this.textMusteriAdi = new System.Windows.Forms.TextBox();
             this.tabATMOperasyonlari = new System.Windows.Forms.TabPage();
+            this.btnAtmOnayla = new System.Windows.Forms.Button();
+            this.textMiktar = new System.Windows.Forms.TextBox();
+            this.labelMiktar = new System.Windows.Forms.Label();
+            this.labelIslemTipi = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelMusteriAdiATM = new System.Windows.Forms.Label();
+            this.textMusteriAdiATM = new System.Windows.Forms.TextBox();
             this.tabKullaniciLoglari = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.labelMusteriler = new System.Windows.Forms.Label();
@@ -42,6 +49,7 @@
             this.tabControl.SuspendLayout();
             this.tabMusteriOlusturma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMusteriler)).BeginInit();
+            this.tabATMOperasyonlari.SuspendLayout();
             this.tabKullaniciLoglari.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +116,13 @@
             // 
             // tabATMOperasyonlari
             // 
+            this.tabATMOperasyonlari.Controls.Add(this.btnAtmOnayla);
+            this.tabATMOperasyonlari.Controls.Add(this.textMiktar);
+            this.tabATMOperasyonlari.Controls.Add(this.labelMiktar);
+            this.tabATMOperasyonlari.Controls.Add(this.labelIslemTipi);
+            this.tabATMOperasyonlari.Controls.Add(this.comboBox1);
+            this.tabATMOperasyonlari.Controls.Add(this.labelMusteriAdiATM);
+            this.tabATMOperasyonlari.Controls.Add(this.textMusteriAdiATM);
             this.tabATMOperasyonlari.Location = new System.Drawing.Point(4, 24);
             this.tabATMOperasyonlari.Name = "tabATMOperasyonlari";
             this.tabATMOperasyonlari.Padding = new System.Windows.Forms.Padding(3);
@@ -115,6 +130,69 @@
             this.tabATMOperasyonlari.TabIndex = 1;
             this.tabATMOperasyonlari.Text = "ATM Operasyonları";
             this.tabATMOperasyonlari.UseVisualStyleBackColor = true;
+            // 
+            // btnAtmOnayla
+            // 
+            this.btnAtmOnayla.Location = new System.Drawing.Point(449, 25);
+            this.btnAtmOnayla.Name = "btnAtmOnayla";
+            this.btnAtmOnayla.Size = new System.Drawing.Size(78, 23);
+            this.btnAtmOnayla.TabIndex = 7;
+            this.btnAtmOnayla.Text = "Onayla";
+            this.btnAtmOnayla.UseVisualStyleBackColor = true;
+            this.btnAtmOnayla.Click += new System.EventHandler(this.btnAtmOnayla_Click);
+            // 
+            // textMiktar
+            // 
+            this.textMiktar.Location = new System.Drawing.Point(184, 25);
+            this.textMiktar.Name = "textMiktar";
+            this.textMiktar.Size = new System.Drawing.Size(132, 23);
+            this.textMiktar.TabIndex = 6;
+            // 
+            // labelMiktar
+            // 
+            this.labelMiktar.AutoSize = true;
+            this.labelMiktar.Location = new System.Drawing.Point(184, 7);
+            this.labelMiktar.Name = "labelMiktar";
+            this.labelMiktar.Size = new System.Drawing.Size(41, 15);
+            this.labelMiktar.TabIndex = 5;
+            this.labelMiktar.Text = "Miktar";
+            // 
+            // labelIslemTipi
+            // 
+            this.labelIslemTipi.AutoSize = true;
+            this.labelIslemTipi.Location = new System.Drawing.Point(322, 7);
+            this.labelIslemTipi.Name = "labelIslemTipi";
+            this.labelIslemTipi.Size = new System.Drawing.Size(57, 15);
+            this.labelIslemTipi.TabIndex = 3;
+            this.labelIslemTipi.Text = "İşlem Tipi";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Para Çek",
+            "Para Ekle",
+            "Bakiye Sorgula"});
+            this.comboBox1.Location = new System.Drawing.Point(322, 25);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // labelMusteriAdiATM
+            // 
+            this.labelMusteriAdiATM.AutoSize = true;
+            this.labelMusteriAdiATM.Location = new System.Drawing.Point(17, 7);
+            this.labelMusteriAdiATM.Name = "labelMusteriAdiATM";
+            this.labelMusteriAdiATM.Size = new System.Drawing.Size(68, 15);
+            this.labelMusteriAdiATM.TabIndex = 1;
+            this.labelMusteriAdiATM.Text = "Müşteri Adı";
+            // 
+            // textMusteriAdiATM
+            // 
+            this.textMusteriAdiATM.Location = new System.Drawing.Point(17, 25);
+            this.textMusteriAdiATM.Name = "textMusteriAdiATM";
+            this.textMusteriAdiATM.Size = new System.Drawing.Size(161, 23);
+            this.textMusteriAdiATM.TabIndex = 0;
             // 
             // tabKullaniciLoglari
             // 
@@ -166,6 +244,8 @@
             this.tabMusteriOlusturma.ResumeLayout(false);
             this.tabMusteriOlusturma.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMusteriler)).EndInit();
+            this.tabATMOperasyonlari.ResumeLayout(false);
+            this.tabATMOperasyonlari.PerformLayout();
             this.tabKullaniciLoglari.ResumeLayout(false);
             this.tabKullaniciLoglari.PerformLayout();
             this.ResumeLayout(false);
@@ -185,5 +265,12 @@
         private ComboBox comboMusteriler;
         private Label labelMusteriler;
         private RichTextBox richTextBox1;
+        private Label labelIslemTipi;
+        private ComboBox comboBox1;
+        private Label labelMusteriAdiATM;
+        private TextBox textMusteriAdiATM;
+        private TextBox textMiktar;
+        private Label labelMiktar;
+        private Button btnAtmOnayla;
     }
 }

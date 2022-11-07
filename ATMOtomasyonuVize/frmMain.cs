@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
@@ -40,6 +41,24 @@ namespace ATMOtomasyonuVize
             dataGridMusteriler.DataSource = banka.musteriler;
         }
 
-       
+        private void btnAtmOnayla_Click(object sender, EventArgs e)
+        {
+            Musteri musteri = banka.musteriler.Find(x => (x.MusteriAdi == textMusteriAdiATM.Text));
+
+            if (musteri == null)
+            {
+                MessageBox.Show("Kullanýcý Bulunamadý.");
+                return;
+            }
+
+            StreamWriter streamWriter = new StreamWriter($"./MusteriLoglari/BANKA-{musteri.MusteriAdi}-LOG.txt");
+            streamWriter.WriteLine(comboBox1.SelectedItem.ToString() + " " + textMiktar.Text);
+            streamWriter.Close();
+
+            textMusteriAdiATM.Text = null;
+            textMiktar.Text = null;
+
+            MessageBox.Show(comboBox1.SelectedItem.ToString() + " Ýþlemi Baþarýlý");
+        }
     }
 }
