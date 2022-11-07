@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ATMOtomasyonuVize
 {
-    public class ATM
+    public class ATM : Banka
     {
+
     }
 }

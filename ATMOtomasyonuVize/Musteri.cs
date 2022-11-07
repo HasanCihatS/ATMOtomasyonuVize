@@ -8,5 +8,7 @@ namespace ATMOtomasyonuVize
 {
     public class Musteri : KullaniciHesabi
     {
+        public string MusteriAdi { get; set; }
+        public string MusteriSifre { get; set; }
     }
 }
